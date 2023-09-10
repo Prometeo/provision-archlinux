@@ -11,6 +11,8 @@
       - rofi
       - podman
       - links
+      - curl
+      - wget  
       - podman-compose
       - distrobox
       - ttf-fira-code

@@ -1,0 +1,27 @@
+---
+
+- name: Install virtualenv
+  pacman:
+    name: python-virtualenv
+    state: present
+  tags:
+    - python
+    - programming-languages
+
+
+- name: Install pyenv
+  pacman:
+    name: pyenv
+    state: present
+  tags:
+    - python
+    - programming-languages
+
+- name: Install pyenv-virtualenv plugin
+  become: false
+  git:
+    repo: https://github.com/pyenv/pyenv-virtualenv.git
+    dest: "{{ home_path }}/.pyenv/plugins/pyenv-virtualenv"
+  tags:
+    - python
+    - programming-languages
