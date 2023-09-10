@@ -1,0 +1,10 @@
+- hosts: all
+  vars:
+    home_path: /home/prometeo
+    local_user: prometeo
+    sshkey: "{{ home_path }}/.ssh/id_rsa"
+
+  become: true
+  
+  roles:
+    - role: basics

@@ -1,0 +1,21 @@
+---
+
+- name: Install basic packages
+  pacman:
+    name: 
+      - htop
+      - btop
+      - cmake
+      - stow
+      - openssh
+      - rofi
+      - podman
+      - links
+      - podman-compose
+      - distrobox
+      - ttf-fira-code
+      - ttf-firacode-nerd
+      - ttf-hack-nerd
+    state: present
+
+

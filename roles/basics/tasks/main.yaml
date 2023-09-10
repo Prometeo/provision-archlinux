@@ -1,0 +1,7 @@
+- import_tasks: install.yaml
+  tags:
+    - basics
+    - kernel
+    - headers
+    - compiler
+    - rpm
