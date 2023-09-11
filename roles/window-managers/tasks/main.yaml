@@ -1,0 +1,6 @@
+---
+
+- import_tasks: install.yaml
+  tags:
+    - qtile
+    - window-managers

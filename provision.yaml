@@ -9,3 +9,5 @@
   roles:
     - role: basics
     - role: programming-languages
+    - role: editors
+    - role: window-managers 

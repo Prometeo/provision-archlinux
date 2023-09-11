@@ -1,0 +1,16 @@
+---
+
+- name: Install Qtile
+  pacman:
+    name: qtile
+    state: present
+  tags:
+    - windows-managers
+
+- name: Install hyprland
+  pacman:
+    name: hyprland
+    state: present
+  tags:
+    - windows-managers
+

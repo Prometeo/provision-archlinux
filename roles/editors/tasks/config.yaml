@@ -1,0 +1,15 @@
+---
+
+- name: Verify if emacs configuration it's already installed
+  stat:
+    path: "{{ home_path }}/.emacs.d"
+  register: emacs_config
+
+- name: Colne emacs configuration
+  become: false
+  when: not emacs_config.stat.exists
+  git:
+    repo: git@gitlab.com:Prometeo136/my_emacs_config.git
+    dest: "{{ home_path }}/.emacs.d"
+    recursive: true
+    key_file: "{{ sshkey }}"

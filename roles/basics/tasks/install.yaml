@@ -12,7 +12,7 @@
       - podman
       - links
       - curl
-      - wget  
+      - wget
       - podman-compose
       - distrobox
       - ttf-fira-code

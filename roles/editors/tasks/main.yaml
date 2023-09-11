@@ -1,0 +1,12 @@
+---
+- import_tasks: install.yaml
+  tags:
+    - emacs
+    - vim
+    - editors
+
+- import_tasks: config.yaml
+  tags:
+    - emacs
+    - vim
+    - editors

@@ -1,0 +1,8 @@
+---
+
+- name: Install editors
+  pacman:
+    name:
+      - emacs
+      - vim
+    state: present

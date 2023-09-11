@@ -25,3 +25,11 @@
   tags:
     - python
     - programming-languages
+
+- name: Install pip
+  pacman:
+    name: python-pip
+    state: present
+  tags:
+    - python
+    - programming-languages
