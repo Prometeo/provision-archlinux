@@ -2,7 +2,7 @@
 
 - name: Install basic packages
   pacman:
-    name: 
+    name:
       - htop
       - btop
       - cmake
@@ -18,6 +18,5 @@
       - ttf-fira-code
       - ttf-firacode-nerd
       - ttf-hack-nerd
+      - ttf-dejavu
     state: present
-
-
