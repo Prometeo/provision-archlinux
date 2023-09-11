@@ -5,7 +5,7 @@
     path: "{{ home_path }}/.emacs.d"
   register: emacs_config
 
-- name: Colne emacs configuration
+- name: Clone emacs configuration
   become: false
   when: not emacs_config.stat.exists
   git:

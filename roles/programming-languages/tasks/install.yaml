@@ -33,3 +33,11 @@
   tags:
     - python
     - programming-languages
+
+- name: Install Ruby
+  pacman:
+    name: ruby
+    state: present
+  tags:
+    - ruby
+    - programming-languages

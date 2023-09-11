@@ -1,0 +1,21 @@
+---
+
+- name: Verify if dotfiles repo isn't already cloned
+  stat:
+    path: "{{ home_path }}/dotfiles"
+  register: dotfiles_dir
+
+- name: Cloning dotfiles
+  become: false
+  when: not dotfiles_dir.stat.exists
+  git:
+    repo: git@gitlab.com:Prometeo136/dotfiles.git
+    dest: "{{ home_path }}/dotfiles"
+    recursive: true
+    key_file: "{{ sshkey }}"
+
+- name: Deploy dotfiles
+  become: false
+  shell: ./setup.sh
+  args:
+    chdir: "{{ home_path }}/dotfiles"
