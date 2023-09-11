@@ -1,0 +1,11 @@
+---
+
+- import_tasks: install.yaml
+  tags:
+    - terminal
+    - cargo
+
+- import_tasks: config.yaml
+  tags:
+    - terminal
+    - cargo

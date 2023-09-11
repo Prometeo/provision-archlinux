@@ -5,9 +5,10 @@
     sshkey: "{{ home_path }}/.ssh/id_rsa"
 
   become: true
-  
+
   roles:
     - role: basics
     - role: programming-languages
     - role: editors
-    - role: window-managers 
+    - role: window-managers
+    - role: terminal

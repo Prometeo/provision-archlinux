@@ -1,0 +1,19 @@
+---
+
+- name: Download scm_breeze
+  become: false
+  git:
+    repo: https://github.com/scmbreeze/scm_breeze.git
+    version: master
+    dest: "{{ home_path }}/.scm_breeze"
+
+- name: Install scm_breeze
+  become: false
+  command: ./install.sh
+  args:
+    chdir: "{{ home_path }}/.scm_breeze"
+
+- name: Remove default zshrc file
+  file:
+    path: "{{ home_path }}/.zshrc"
+    state: absent
