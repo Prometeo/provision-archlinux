@@ -11,5 +11,5 @@
     - role: programming-languages
     - role: editors
     - role: window-managers
-    # - role: terminal
+    - role: terminal
     - role: dotfiles

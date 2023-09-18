@@ -3,6 +3,6 @@
 - name: Install editors
   pacman:
     name:
-      - emacs
+      - emacs-wayland
       - vim
     state: present

@@ -4,14 +4,9 @@
   pacman:
     name:
       - alacritty
-      - zsh
       - bat
       - ripgrep
     state: present
-
-- name: Set zsh as default shell
-  shell: "chsh -s /usr/bin/zsh {{ local_user }}"
-
 
 - name: Install starship
   become: false
