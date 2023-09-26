@@ -20,4 +20,6 @@
       - ttf-firacode-nerd
       - ttf-hack-nerd
       - ttf-dejavu
+      - ttf-jetbrains-mono-nerd
+      - noto-fonts-emoji
     state: present
