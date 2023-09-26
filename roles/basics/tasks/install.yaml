@@ -8,13 +8,40 @@
       - cmake
       - stow
       - openssh
-      - rofi
+      - wofi
+      - mako
+      - grim
+      - slurp
+      - thunar
+      - xdg-desktop-portal-hyprland
+      - swappy
       - podman
       - links
       - fzf
       - curl
       - wget
+      - sddm
+      - hyprland
+      - waybar
+      - qt5-svg
+      - qt5-quickcontrols2
+      - qt5-graphicaleffects
+      - polkit-gnome
+      - python-requests
+      - pamixer
+      - pavucontrol
+      - brightnessctl
+      - bluez
+      - bluez-utils
+      - network-manager-applet
+      - gvfs
+      - blueman
+      - thunar-archive-plugin
+      - file-roller
+      - pacman-contrib
       - podman-compose
+      - xfce4-settings
+      - lxappearance
       - distrobox
       - ttf-fira-code
       - ttf-firacode-nerd
