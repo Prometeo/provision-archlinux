@@ -4,4 +4,8 @@
     - kernel
     - headers
     - compiler
-    - rpm
+    - pacman
+
+- import_tasks: config.yaml
+  tags:
+    - services
