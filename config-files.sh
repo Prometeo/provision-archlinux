@@ -16,8 +16,7 @@ echo -e "$CNT - Setting up the login screen."
 sudo cp -R $1/sdt /usr/share/sddm/themes/
 sudo chown -R $USER:$USER /usr/share/sddm/themes/sdt
 sudo mkdir /etc/sddm.conf.d
-echo -e "[Theme]\nCurrent=sdt" | sudo tee -a
-/etc/sddm.conf.d/10-theme.conf
+echo -e "[Theme]\nCurrent=sdt" | sudo tee -a /etc/sddm.conf.d/10-theme.conf
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
     echo -e "$COK - $WLDIR found"

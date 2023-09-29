@@ -19,3 +19,6 @@
   shell: ./setup.sh
   args:
     chdir: "{{ home_path }}/dotfiles"
+
+- name: Additional dotfiles
+  script: "{{ playbook_dir }}/config-files.sh {{ home_path }}/dotfiles"
