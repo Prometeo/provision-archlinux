@@ -50,3 +50,28 @@
       - ttf-jetbrains-mono-nerd
       - noto-fonts-emoji
     state: present
+
+
+- name: Verify if yay is installed
+  stat:
+    path: "/sbin/yay"
+  register: yay_installer
+
+
+- name: Clone yay
+  become: false
+  when: not yay_installer.stat.exists
+  git:
+    repo: https://aur.archlinux.org/yay.git
+    dest: "{{ home_path }}/yay-git"
+
+- name: Install yay
+  become: false
+  when: not yay_installer.stat.exists
+  shell:
+    cmd: makepkg -si --noconfirm
+    chdir: "{{ home_path }}/yay-git"
+
+- name: Install needed packages with yay
+  become: false
+  script: "{{ playbook_dir }}/yay-installer.sh"
