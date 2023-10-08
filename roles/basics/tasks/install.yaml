@@ -17,6 +17,7 @@
       - swappy
       - podman
       - links
+      - lsd
       - fzf
       - curl
       - wget
