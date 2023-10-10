@@ -8,15 +8,15 @@ CAT="[\e[1;37mATTENTION\e[0m]"
 CWR="[\e[1;35mWARNING\e[0m]"
 CAC="[\e[1;33mACTION\e[0m]"
 
-# path of sdt directory
+# path of sddm-theme directory
 $1
 
 # Copy the SDDM theme
 echo -e "$CNT - Setting up the login screen."
-sudo cp -R $1/sdt /usr/share/sddm/themes/
-sudo chown -R $USER:$USER /usr/share/sddm/themes/sdt
+sudo cp -R $1/sddm-tiger /usr/share/sddm/themes/
+sudo chown -R $USER:$USER /usr/share/sddm/themes/sddm-tiger
 sudo mkdir /etc/sddm.conf.d
-echo -e "[Theme]\nCurrent=sdt" | sudo tee -a /etc/sddm.conf.d/10-theme.conf
+echo -e "[Theme]\nCurrent=sddm-tiger" | sudo tee -a /etc/sddm.conf.d/10-theme.conf
 WLDIR=/usr/share/wayland-sessions
 if [ -d "$WLDIR" ]; then
     echo -e "$COK - $WLDIR found"
@@ -36,4 +36,3 @@ xfconf-query -c xsettings -p /Net/ThemeName -s "Adwaita-dark"
 xfconf-query -c xsettings -p /Net/IconThemeName -s "Adwaita-dark"
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface icon-theme "Adwaita-dark"
-ln -sf /usr/share/sddm/themes/sdt/Backgrounds/wallpaper-dark.jpg /usr/share/sddm/themes/sdt/wallpaper.jpg
