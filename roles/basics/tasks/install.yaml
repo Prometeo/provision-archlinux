@@ -18,6 +18,7 @@
       - podman
       - links
       - lsd
+      - less
       - fzf
       - curl
       - wget
