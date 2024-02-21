@@ -15,3 +15,7 @@
 - name: Install zellij
   become: false
   command: "cargo install zellij"
+
+- name: Install zoxide
+  become: false
+  command: "cargo install zoxide --locked"
