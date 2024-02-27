@@ -41,3 +41,19 @@
   tags:
     - ruby
     - programming-languages
+
+- name: Install Shellcheck
+  pacman:
+    name: shellcheck
+    state: present
+  tags:
+    - bash
+    - programming-languages
+
+- name: Install bash language server
+  pacman:
+    name: bash-language-server
+    state: present
+  tags:
+    - bash
+    - programming-languages
