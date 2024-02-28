@@ -3,6 +3,7 @@
 - name: Install basic packages
   pacman:
     name:
+      - at
       - htop
       - btop
       - cmake
